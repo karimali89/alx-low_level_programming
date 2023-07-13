@@ -4,11 +4,4 @@
 cfile=$CFILE
 
 # Generate the assembly code using gcc with the Intel syntax option
-gcc -S -masm=intel $cfile
-
-# Rename the output file to have the .s extension
-output="${cfile%.*}.s"
-mv "${cfile%.*}.s" "$output"
-
-# Print the output file name
-echo "Generated assembly code: $output"
+gcc -S -masm=intel $cfile -o "${cfile%.*}.s"
