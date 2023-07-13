@@ -5,3 +5,6 @@ cfile=$CFILE
 
 # Generate the assembly code using gcc with the Intel syntax option
 gcc -S -masm=intel $cfile -o "${cfile%.*}.s"
+
+# Print the output file name
+echo "Generated assembly code: ${cfile%.*}.s"
