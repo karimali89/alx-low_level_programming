@@ -1,5 +1,19 @@
 #include "main.h"
 
+/* Function prototype */
+void print_alphabet(void);
+
+/**
+ * main - check the code for Holberton School students
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	print_alphabet();
+	return (0);
+}
+
 /**
  * print_alphabet - Prints the alphabet in lowercase
  */
@@ -12,3 +26,4 @@ void print_alphabet(void)
 
 	_putchar('\n');
 }
+
