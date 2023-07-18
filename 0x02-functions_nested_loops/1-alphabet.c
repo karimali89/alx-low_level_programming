@@ -4,7 +4,7 @@
 void print_alphabet(void);
 
 /**
- * main - check the code for Holberton School students
+ * main - Entry point
  *
  * Return: Always 0 (Success)
  */
