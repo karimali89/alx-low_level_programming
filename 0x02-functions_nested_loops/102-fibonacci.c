@@ -7,22 +7,22 @@
  */
 int main(void)
 {
-	int num1 = 0;
-	int num2 = 1;
-	int nextNum;
-	int count;
+    unsigned long num1 = 1;
+    unsigned long num2 = 2;
+    unsigned long nextNum;
+    int count;
 
-	printf("%d, %d", num1, num2);
+    printf("%lu, %lu", num1, num2);
 
-	for (count = 2; count < 50; count++)
-	{
-		nextNum = num1 + num2;
-		printf(", %d", nextNum);
-		num1 = num2;
-		num2 = nextNum;
-	}
+    for (count = 2; count < 50; count++)
+    {
+        nextNum = num1 + num2;
+        printf(", %lu", nextNum);
+        num1 = num2;
+        num2 = nextNum;
+    }
 
-	printf("\n");
+    printf("\n");
 
-	return (0);
+    return (0);
 }
