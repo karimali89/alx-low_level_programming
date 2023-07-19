@@ -1,29 +1,17 @@
-#include "main.h"
-
-/* Function prototype */
-void print_alphabet(void);
-
+#include "holberton.h"
 /**
- * main - Entry point
+ * print_alphabet - wirte the the lower-case alphabet on a line.
  *
- * Return: Always 0 (Success)
- */
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-
-/**
- * print_alphabet - Prints the alphabet in lowercase
+ *
+ *
  */
 void print_alphabet(void)
 {
-	char letter;
+	char c;
 
-	for (letter = 'a'; letter <= 'z'; letter++)
-		_putchar(letter);
-
+	for (c = 'a' ; c <= 'z' ; c++)
+	{
+		_putchar(c);
+	}
 	_putchar('\n');
 }
-
