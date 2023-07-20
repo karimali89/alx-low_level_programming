@@ -8,8 +8,7 @@
  *         0 and prints 0 if n is zero,
  *        -1 and prints - if n is less than zero.
  */
-
-int print_sing(int n)
+int print_sign(int n)
 {
 	if (n > 0)
 	{
@@ -26,20 +25,4 @@ int print_sing(int n)
 		printf("-");
 		return (-1);
 	}
-}
-
-
-int main(void)
-{
-	int number;
-	int result; /* Declare result here */
-
-	printf("Enter a number: ");
-	scanf("%d", &number);
-
-	result = print_sing(number); /* Assign value to result here */
-	putchar('\n');
-	printf("Returned value: %d\n", result);
-
-	return (0);
 }
