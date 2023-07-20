@@ -16,30 +16,30 @@ int print_sing(int n)
 		putchar('+');
 		return (1);
 	}
-       	else if (n == 0)
-       {
+	else if (n == 0)
+	{
 		putchar('0');
 		return (0);
-	} 
+	}
 	else
 	{
 		printf("-");
 		return (-1);
 	}
-	else
-	}
 }
 
-int main (void)
+
+int main(void)
 {
 	int number;
+	int result; /* Declare result here */
 
-	printf("Enter a anumber:");
+	printf("Enter a number: ");
 	scanf("%d", &number);
 
-	int result = print_sing(number);
-	putchar("\n");
-	printf("Returned value: "%d\n", result);
+	result = print_sing(number); /* Assign value to result here */
+	putchar('\n');
+	printf("Returned value: %d\n", result);
 
 	return (0);
 }
