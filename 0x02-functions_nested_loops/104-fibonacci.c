@@ -1,22 +1,44 @@
 #include <stdio.h>
 
+/**
+ * main - Prints the first 98 Fibonacci numbers.
+ * Return: Always 0.
+ */
 int main(void)
 {
-    unsigned long int first = 0, second = 1, sum;
-    int range = 98; // Number of Fibonacci numbers to print
+	int count;
+	unsigned long fib1 = 0, fib2 = 1, sum;
+	unsigned long fib1_half1, fib1_half2, fib2_half1, fib2_half2;
+	unsigned long half1 = 0, half2 = 0;
+	
+	for (count = 0; count < 92; count++)
+	{
+		sum = fib1 + fib2;
+		printf("%lu, ", sum);
+		fib1 = fib2;
+		fib2 = sum;
+	}
 
-    for (int i = 1; i <= range; i++)
-    {
-        sum = first + second;
-        first = second;
-        second = sum;
+	fib1_half1 = fib1 / 10000000000;
+	fib2_half1 = fib2 / 10000000000;
+	fib1_half2 = fib1 % 10000000000;
+	fib2_half2 = fib2 % 10000000000;
 
-        printf("%lu", sum);
+	for (count = 92; count < 99; count++)
+	{
+		half1 = fib1_half1 + fib2_half1;
+		half2 = fib1_half2 + fib2_half2;
+		if (count != 98)
+			printf("%lu%010lu, ", half1, half2);
+		else
+			printf("%lu%010lu", half1, half2);
 
-        if (i < range)
-            printf(", ");
-    }
+		fib1_half1 = fib2_half1;
+		fib1_half2 = fib2_half2;
+		fib2_half1 = half1;
+		fib2_half2 = half2;
+	}
 
-    printf("\n");
-    return 0;
+	printf("\n");
+	return (0);
 }
